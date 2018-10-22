@@ -33,6 +33,12 @@
 
     * [iOS的drawRect方法和重绘机制](/system_feature/iOS的drawRect方法和重绘机制.md)
 
+    * KVO观察者机制
+
+        * [KVO的实现原理](/system_feature/KVO/KVO的实现原理.md)
+
+        * [KVO的基本使用示例]()
+
 * #### 工程设计问题
 
     * [如何追踪crash，线上crash率的追踪]()
