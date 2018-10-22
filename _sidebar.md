@@ -22,6 +22,8 @@
 
     * [iOS的drawRect方法和重绘机制](/system_feature/iOS的drawRect方法和重绘机制.md)
 
+    * [iOS的渲染机制和卡顿原因](/system_feature/渲染机制和卡顿原因.md)
+
     * KVO
 
         * [KVO的实现原理](/system_feature/KVO/KVO的实现原理.md)
