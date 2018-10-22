@@ -37,9 +37,11 @@
 
         * [KVO的实现原理](/system_feature/KVO/KVO的实现原理.md)
 
-        * [KVO的基本使用示例](/system_feature/KVO/KVO的基本使用.md)
-
         * [KVO使用注意点](/system_feature/KVO/KVO使用注意点.md)
+
+        * [如何关闭KVO和手动触发KVO](/system_feature/KVO/如何关闭KVO和手动触发KVO.md)
+
+        * [KVO的基本使用示例](/system_feature/KVO/KVO的基本使用.md)
 
 * #### 工程设计问题
 
