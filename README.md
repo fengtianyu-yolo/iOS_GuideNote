@@ -39,6 +39,8 @@
 
         * [KVO的基本使用示例](/system_feature/KVO/KVO的基本使用.md)
 
+        * [KVO使用注意点](/system_feature/KVO/KVO使用注意点.md)
+
 * #### 工程设计问题
 
     * [如何追踪crash，线上crash率的追踪]()
