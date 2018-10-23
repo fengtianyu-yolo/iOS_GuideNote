@@ -9,9 +9,9 @@
     
     * [属性修饰符`strong`、`weak`、`assign`、`copy`的作用](/lang_feature/属性修饰符分别的作用.md)
     
-    * [`__weak`和`__block`的作用](/lang_feature/属性修饰符分别的作用.md?id=nonatomic和atomic的作用)
+    * [`__weak`和`__block`的作用](/lang_feature/属性修饰符分别的作用.md?id=__weak和__block的作用)
     
-    * [`nonatomic` 和 `atomic`的作用](/lang_feature/属性修饰符分别的作用.md)
+    * [`nonatomic` 和 `atomic`的作用](/lang_feature/属性修饰符分别的作用.md?id=nonatomic和atomic的作用)
 
     * `weak`的实现原理
 
@@ -52,6 +52,8 @@
         * [如何关闭KVO和手动触发KVO](/system_feature/KVO/如何关闭KVO和手动触发KVO.md)
 
         * [KVO的基本使用示例](/system_feature/KVO/KVO的基本使用.md)
+
+    * [load方法和initalize方法](/system_feature/load方法和initalize方法.md)
 
 * #### 工程设计问题
 
