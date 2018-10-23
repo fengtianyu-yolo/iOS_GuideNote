@@ -14,6 +14,10 @@
 
     * [block的本质，以及clang对block的实现](/block/block的本质.md)
 
+* Runtime相关问题
+
+    * [消息转发机制](/runtime/消息转发机制.md)
+
 * 系统框架和系统机制的问题
 
     * [UIView和CALayer之间的关系](/system_feature/UIView和CALayer的关系)

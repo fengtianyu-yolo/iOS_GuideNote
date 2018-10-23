@@ -29,6 +29,10 @@
 
     * 有哪几种类型的block
 
+* #### Runtime
+
+    * [消息转发机制](/runtime/消息转发机制.md)
+
 * #### 系统框架和系统机制问题
 
     * [UIView和CALayer的关系](/system_feature/UIView和CALayer的关系)
