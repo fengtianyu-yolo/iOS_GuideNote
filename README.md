@@ -19,6 +19,8 @@
 
     * 如何定义私有属性和私有方法
 
+    * [OC中类和结构体的区别](/lang_feature/OC中类和结构体的区别)
+
 * #### Block相关问题
 
     * [block的本质，以及clang对block的实现](/block/block的本质.md)

@@ -10,6 +10,8 @@
 
     * [@weakify@strongify宏定义解释](/lang_feature/@weakify@strongify宏定义解释.md)
 
+    * [OC中类和结构体的区别](/lang_feature/OC中类和结构体的区别)
+
 * Block相关问题
 
     * [block的本质，以及clang对block的实现](/block/block的本质.md)
@@ -38,4 +40,4 @@
 
         * [KVO的基本使用示例](/system_feature/KVO/KVO的基本使用.md)
 
-    * [load方法和initalize方法](/system/feature/load方法和initalize方法.md)
+    * [load方法和initalize方法](/system_feature/load方法和initalize方法.md)
