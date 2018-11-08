@@ -127,10 +127,12 @@
 
 *  [XCode缓存清理目录]()
 
-* [`project.pbxproj `的解析](/assist_tool/project_pbxproj文件解析.md)
+* [`project.pbxproj `的解析及脚本修改证书配置思路实现](/assist_tool/project_pbxproj文件解析.md)
 
 * [xcodebuild命令进行打包]()
 
-* XCode10下如何切换编译系统
+* [XCode10下如何切换编译系统](/assist_tool/change_xcode_build.md)
 
-* 多XCode版本时更改`xcodebuild`使用的编译系统
+* [`xcodebuild`使用旧版本编译系统](/assist_tool/change_xcode_build.md)
+
+* [多XCode版本时更改`xcodebuild`使用的XCode版本](/assist_tool/change_xcode_build.md)
