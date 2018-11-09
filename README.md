@@ -57,6 +57,8 @@
 
     * 有哪几种类型的block
 
+    * 为什么静态变量和全局变量在block中可以修改
+
 * #### Runtime
 
     * [消息转发机制](/runtime/消息转发机制.md)
@@ -102,6 +104,10 @@
     * 为什么UI更新需要在主线程执行
 
     * `loadView`的作用
+
+    * vc中的view是什么时候创建的。init之后view会创建吗。init之后想使用view如何使用
+
+    * [通知的观察者在销毁的时候需要主动将自己从通知中心移除吗](/system_feature/remove_observer_from_notificationcenter.md)
 
 * #### 如何进行优化
 
