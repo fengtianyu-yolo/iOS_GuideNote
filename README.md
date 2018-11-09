@@ -1,7 +1,7 @@
 
-### iOS Guide
+# iOS Guide
 
-* #### 关键字和语言特性的问题
+* ## 关键字和语言特性的问题
 
     * [synthesize关键字的作用](lang_feature/synthesize关键字的作用.md)
 
@@ -27,7 +27,7 @@
 
     * 为什么`Category`中不能添加属性
 
-* #### Runloop
+* ## Runloop
 
     * 什么是RunLoop，RunLoop的作用是什么
 
@@ -47,7 +47,7 @@
 
     * 如何在RunLoop空闲的时候处理特定任务
 
-* #### Block相关问题
+* ## Block相关问题
 
     * [block的本质，以及clang对block的实现](/block/block的本质.md)
 
@@ -59,17 +59,17 @@
 
     * 为什么静态变量和全局变量在block中可以修改
 
-* #### Runtime
+* ## Runtime
 
     * [消息转发机制](/runtime/消息转发机制.md)
 
-* #### 多线程
+* ## 多线程
 
     * 线程之间如何进行通信
 
     * 用过哪些锁，哪些锁的性能比较高
 
-* #### 系统框架和系统机制问题
+* ## 系统框架和系统机制问题
 
     * 动画相关
 
@@ -109,11 +109,11 @@
 
     * [通知的观察者在销毁的时候需要主动将自己从通知中心移除吗](/system_feature/remove_observer_from_notificationcenter.md)
 
-* #### 如何进行优化
+* ## 如何进行优化
 
     * [视图调试工具的使用](/optimize/视图调试工具的使用.md)
 
-* #### 工程设计问题
+* ## 工程设计问题
 
     * [如何追踪crash，线上crash率的追踪]()
 
@@ -127,7 +127,7 @@
 
     * HTTPS通信过程
 
-### 辅助工具的使用
+## 辅助工具的使用
 
 * [LLDB命令使用]()
 
