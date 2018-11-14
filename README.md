@@ -21,6 +21,8 @@
 
     * `strong`的实现原理
 
+    * autoreleasePool的实现原理
+
     * 如何定义私有属性和私有方法
 
     * [OC中类和结构体的区别](/lang_feature/OC中类和结构体的区别)

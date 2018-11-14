@@ -1,8 +1,7 @@
 # Block的本质
 
-简单说，Block是带有局部变量的匿名函数
 
-#### Block转换为C++
+## Block转换为C++
 
 这样一段代码
 
@@ -19,13 +18,6 @@ int main(int argc, const char * argv[]) {
 经过clang转换为c++代码之后
 
 ```
-struct __block_impl {
-  void *isa;
-  int Flags;
-  int Reserved;
-  void *FuncPtr;
-};
-
 struct __main_block_impl_0 {
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
@@ -37,15 +29,22 @@ struct __main_block_impl_0 {
   }
 };
 
-static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-
-        printf("Block");
-    }
+struct __block_impl {
+  void *isa;
+  int Flags;
+  int Reserved;
+  void *FuncPtr;
+};
 
 static struct __main_block_desc_0 {
   size_t reserved;
   size_t Block_size;
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0)};
+
+static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
+
+        printf("Block");
+}
 
 int main(int argc, const char * argv[]) {
     void (*blk)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA));
@@ -75,7 +74,7 @@ OC中定义一个Block
     void(*blk)(void) = __main_block_impl_0(__main_block_func_0, &__main_block_desc_0_DATA)
 ```
 
-从上面可以看到，`=`后面是Block的实现部分，转换之后Block的实现部分其实就是调用了`__main_block_impl_0`结构体的构造方法生成一个结构体的实例。
+从上面可以看到，`=`后面是创建一个Block的部分，转换之后创建Block的过程其实就是调用了`__main_block_impl_0`结构体的构造方法生成一个结构体的实例。
 
 这个构造方法中传入了两个参数。第一个是`__main_block_func_0`，从上面的代码可以看到，这是一个函数指针。这个函数就是Block的具体实现转换成的函数。第二个参数是一个结构体实例的指针。这个参数是确定了结构体所需要的空间大小。
 
@@ -87,7 +86,7 @@ OC中定义一个Block
 
 **block对象转换为c++之后其实就是一个结构体实例，block变量就是一个结构体实例的指针**
 
-#### 解析`__main_block_impl_0`结构体
+### 解析`__main_block_impl_0`结构体
 
 既然Block就是一个`__main_block_impl_0`的实例，那么看看这个结构体的具体内容
 
@@ -123,4 +122,8 @@ struct __block_impl {
 ```
 这个结构体定义了一个函数指针的属性，这个指针指向了block实现转换后的函数。
 
-还有一个isa指针。
+还有一个isa指针。用于指向该block所属的类型
+
+### block的转换后代码对比和关系如图所示
+
+![block essence](https://github.com/cocacola-ty/Images/blob/master/block_essence.png?raw=true)
