@@ -55,6 +55,8 @@
 
     * [为什么block捕获的是变量的值](/block/block值捕获原理.md)
 
+    * [为什么block中静态变量、全局变量、静态全局变量的值可以更改](/block/block中全局变量等更改值的原理.md)
+
     * `__block`的实现原理，为什么`__block`修饰的变量值可以改变
 
     * block是否要用copy修饰符
