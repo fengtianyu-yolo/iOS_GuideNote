@@ -53,6 +53,8 @@
 
     * [block的本质，以及clang对block的实现](/block/block的本质.md)
 
+    * [为什么block捕获的是变量的值](/block/block值捕获原理.md)
+
     * `__block`的实现原理，为什么`__block`修饰的变量值可以改变
 
     * block是否要用copy修饰符
