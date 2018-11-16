@@ -71,13 +71,17 @@
 
 * ## 多线程
 
+    * 同步、异步、并发、串行的概念
+
+    * 队列和线程的关系
+
     * 线程之间如何进行通信
 
     * 用过哪些锁，哪些锁的性能比较高
 
 * ## 系统框架和系统机制问题
 
-    * 动画相关
+    * ### 动画相关
 
         * 执行动画的几种方式
 
@@ -93,7 +97,7 @@
 
     * [iOS的渲染机制和卡顿原因](/system_feature/渲染机制和卡顿原因.md)
 
-    * KVO观察者机制
+    * ### KVO观察者机制
 
         * [KVO的实现原理](/system_feature/KVO/KVO的实现原理.md)
 
@@ -102,6 +106,16 @@
         * [如何关闭KVO和手动触发KVO](/system_feature/KVO/如何关闭KVO和手动触发KVO.md)
 
         * [KVO的基本使用示例](/system_feature/KVO/KVO的基本使用.md)
+    
+    * ### [UITableView]
+
+        * [为什么cell不从tableView的顶点开始布局](/system_feature/tableview_adjustinset.md)
+
+    * ### [UIViewController]
+
+        * [UIViewController常见问题](/system_feature/vc_faq.md)
+
+        * [`UIViewController`布局相关的一些属性：`edgesForExtendedLayout`,`extendedLayoutIncludesOpaqueBars`,`automaticallyAdjustsScrollViewInsets`](/system_feature/vc_layout_property.md)
 
     * [load方法和initalize方法](/system_feature/load方法和initalize方法.md)
 
