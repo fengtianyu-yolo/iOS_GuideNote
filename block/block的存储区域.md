@@ -53,5 +53,26 @@ block可以存放在三种区域，栈区、堆区、全局数据区
 
 ## 什么时候在堆区
 
-ARC环境下，如果变量引用一个栈区的block，这个block就会自动复制到堆区。
+**ARC环境下**，如果变量引用一个栈区的block，这个block就会自动复制到堆区。如下所示
+
+```
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    int a = 10;
+    void (^blk)(void) = ^{
+        NSLog(@"%d", a);
+    };
+    NSLog(@"%@", blk);
+}
+```
+
+因为默认情况下变量是`__strong`修饰的。所以`blk`变量对block进行了强引用。
+
+这时会调用`objc_retainBlock(blk)`来进行持有。而`objc_retaainBlock()`其实就是`Block_copy()`函数。
+
+`Block_copy()`函数的作用是将栈上的block赋值到堆上，并将地址返回给blk变量。
+
+所以变量引用一个栈区block，这个block会自动复制到堆区。
+
+当这个方法执行完毕，blk变量被释放，block对象没有了强引用，对象也就被释放。
 
