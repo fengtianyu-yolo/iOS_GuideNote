@@ -15,6 +15,8 @@
     
     * [`nonatomic` 和 `atomic`的作用](/lang_feature/属性修饰符分别的作用.md?id=nonatomic和atomic的作用)
 
+    * atomic是线程安全的吗
+
     * [`weak`的底层实现原理](/lang_feature/weak的底层实现原理.md)
 
     * [`weak`属性如何自动置`nil`](/lang_feature/weak的底层实现原理.md?id=当weak指针指向的对象释放时，weak指针如何自动置为nil的)
@@ -53,17 +55,23 @@
 
     * [block的本质，以及clang对block的实现](/block/block的本质.md)
 
-    * [为什么block捕获的是变量的值](/block/block值捕获原理.md)
+    * [block捕获变量值的原理。](/block/block值捕获原理.md)
+        
+        * 为什么block中使用的外部变量，当创建完block之后即使更改变量，block中的变量值也不会改变。
+        
+        * 为什么block中不可以更改外部变量的值。
 
     * [为什么block中静态变量、全局变量、静态全局变量的值可以更改](/block/block中全局变量等更改值的原理.md)
 
     * `__block`的实现原理，为什么`__block`修饰的变量值可以改变
 
+    * block的存储区域
+
     * block是否要用copy修饰符
 
-    * 有哪几种类型的block
+    * `__block`修饰的变量存储区域
 
-    * 为什么静态变量和全局变量在block中可以修改
+    * 为什么block中的对象可以在对象的作用域之外使用。block截获对象的原理
 
 * ## Runtime
 
@@ -166,3 +174,11 @@
 * [`xcodebuild`使用旧版本编译系统](/assist_tool/change_xcode_build.md)
 
 * [多XCode版本时更改`xcodebuild`使用的XCode版本](/assist_tool/change_xcode_build.md)
+
+## 知识扩展
+
+* quic
+
+* spdy
+
+* grpc

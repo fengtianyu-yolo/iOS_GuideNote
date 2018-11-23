@@ -19,14 +19,19 @@ int main(int argc, const char * argv[]) {
 
 ```
 struct __main_block_impl_0 {
+
+  // 结构体中的属性
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
+
+// 结构体的构造函数
   __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int flags=0) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
     Desc = desc;
   }
+
 };
 
 struct __block_impl {
@@ -42,11 +47,11 @@ static struct __main_block_desc_0 {
 } __main_block_desc_0_DATA = { 0, sizeof(struct __main_block_impl_0)};
 
 static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-
         printf("Block");
 }
 
 int main(int argc, const char * argv[]) {
+
     void (*blk)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA));
     
     ((void (*)(__block_impl *)) ((__block_impl *)blk)->FuncPtr) ((__block_impl *)blk);
@@ -92,6 +97,7 @@ OC中定义一个Block
 
 ```
 struct __main_block_impl_0 {
+
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
   
