@@ -16,6 +16,16 @@
 
     * [block的本质，以及clang对block的实现](/block/block的本质.md)
 
+    * [block捕获变量值的原理。](/block/block值捕获原理.md)
+
+    * [为什么block中静态变量、全局变量、静态全局变量的值可以更改](/block/block中全局变量等更改值的原理.md)
+
+    * [有几种类型的block，block的存储区域](/block/block的存储区域.md)
+
+    * [为什么__block修饰的变量值可以更改](/block/__block修饰符的作用和原理.md)
+
+    * [为什么block中的对象可以在对象的作用域之外使用。block截获对象的原理](/block/SAQ.md)
+
 * Runtime相关问题
 
     * [消息转发机制](/runtime/消息转发机制.md)
