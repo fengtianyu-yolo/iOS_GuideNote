@@ -29,6 +29,8 @@
 
     * [OC中类和结构体的区别](/lang_feature/OC中类和结构体的区别)
 
+    * Category的特性
+
     * 为什么`Category`中不能添加属性
 
 * ## Runloop
@@ -83,13 +85,39 @@
 
 * ## 多线程
 
+    * 什么是GCD
+
+    * 线程之间通信方式
+
     * 同步、异步、并发、串行的概念
+
+    * 同步一定是在当前线程执行吗
+
+    * 串行队列一定是只有一条线程去执行这个队列中的任务吗
+
+    * 什么是线程同步。实现线程同步的方式
+
+        * 用锁
+
+        * 串行队列
+
+    * 用过哪些锁，哪些锁的性能比较高
 
     * 队列和线程的关系
 
-    * 线程之间如何进行通信
+    * GCD中API的作用和其应用场景
 
-    * 用过哪些锁，哪些锁的性能比较高
+        * `dispatch_group`
+
+        * `dispatch_barrier_async`
+
+        * `dispatch_semaphore`
+
+        * `dispatch_queue_create`
+
+        * `dispatch_apply`
+
+        * `dispatch_after`
 
 * ## 系统框架和系统机制问题
 
@@ -129,17 +157,33 @@
 
         * [`UIViewController`布局相关的一些属性：`edgesForExtendedLayout`,`extendedLayoutIncludesOpaqueBars`,`automaticallyAdjustsScrollViewInsets`](/system_feature/vc_layout_property.md)
 
+        * [控制器的视图加载和生命周期 / vc中的view什么时候创建 / loadView的作用 / vc init之后有视图吗](/system_feature/ViewController视图加载和生命周期.md)
+
     * [load方法和initalize方法](/system_feature/load方法和initalize方法.md)
 
     * 如何去设计一个通知中心 / 通知中心的实现
 
     * 为什么UI更新需要在主线程执行
 
-    * `loadView`的作用
+    * appdelegate中的的回调都是什么时候触发
 
-    * vc中的view是什么时候创建的。init之后view会创建吗。init之后想使用view如何使用
+    * [UIImage是否是延迟解码的，什么时候进行的解码](/system_featurn/FAQ.md)
+
+    * NSTimer的常见问题
+
+        * NSTimer如何创建、如何销毁
+
+        * timer的缺点和使用中容易出现的问题
+
+        * 如何创建比较准的定时器
+
+        * 如何在子线程中schedule一个NSTimer
 
     * [通知的观察者在销毁的时候需要主动将自己从通知中心移除吗](/system_feature/remove_observer_from_notificationcenter.md)
+
+    * [集合的遍历方式](/system_feature/集合的遍历.md)
+
+    * [如何在遍历数组的时候删除元素](/system_feature/集合的遍历.md)
 
 * ## 如何进行优化
 
@@ -149,7 +193,7 @@
 
     * [如何追踪crash，线上crash率的追踪]()
 
-    * 面向对象的设计原则是什么
+    * 面向对象的设计原则：SOLID原则
 
     * 什么是简单工厂模式、工厂模式、抽象工厂模式
 
@@ -159,9 +203,31 @@
 
     * HTTPS通信过程
 
-* #### 控件效果实现
+    * [TCP三次握手和四次挥手的过程](/basic_of_computer/TCP三此握手和四次挥手.md)
+
+    * 冒泡排序算法
+
+    * 选择排序算法
+
+    * 快速排序算法
+
+    * 插入排序
+
+    * 归并排序
+
+    * 桶排序算法
+
+    * 堆排序算法
+
+* #### 开发笔记
+
+    * [开发中的技巧](/custom_kit/开发中的技巧.md)
 
     * [瀑布流的实现](/custom_kit/瀑布流的实现.md)
+
+    * [下拉刷新的实现](/custom_kit/下拉刷新控件的实现思路.md)
+
+    * OC如何实现函数式编程语法
 
 ## 辅助工具的使用
 
