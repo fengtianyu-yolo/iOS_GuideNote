@@ -23,6 +23,8 @@
 
     * `strong`的实现原理
 
+    * [autorelease和autoreleasePool](/lang_feature/autorelease和autoreleasepool.md)
+
     * autoreleasePool的实现原理
 
     * 如何定义私有属性和私有方法
