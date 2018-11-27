@@ -195,6 +195,8 @@
 
     * [下拉刷新的实现](/custom_kit/下拉刷新控件的实现思路.md)
 
+    * [AFNetworking与信号量使用时导致的死锁](/custom_kit/AFN_Semaphore_deadlock.md)
+
     * OC如何实现函数式编程语法
 
     ### 优化记录
@@ -226,6 +228,10 @@
     * HTTPS通信过程
 
     * [TCP三次握手和四次挥手的过程](/basic_of_computer/TCP三此握手和四次挥手.md)
+
+    * TCP怎样保证的可靠交付
+
+    * DNS是基于TCP还是UDP的
 
     * 冒泡排序算法
 
