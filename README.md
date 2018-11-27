@@ -217,7 +217,7 @@
 
     * iOS中装饰器模式如何实现
 
-    * [iOS中的单例模式实现]()
+    * [iOS中的单例模式实现](/custom_kit/singleton.md)
 
 ***
 
