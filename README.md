@@ -191,13 +191,19 @@
 
     * [开发中的技巧](/custom_kit/开发中的技巧.md)
 
+    ### 功能实现
+
     * [瀑布流的实现](/custom_kit/瀑布流的实现.md)
 
     * [下拉刷新的实现](/custom_kit/下拉刷新控件的实现思路.md)
 
-    * [AFNetworking与信号量使用时导致的死锁](/custom_kit/AFN_Semaphore_deadlock.md)
+    * [iOS中的单例模式实现](/custom_kit/singleton.md)
 
     * OC如何实现函数式编程语法
+
+    * [实现网络请求的顺序执行及方案比较](/custom_kit/network_serial.md)
+
+    * [AFNetworking与信号量使用时导致的死锁](/custom_kit/AFN_Semaphore_deadlock.md)
 
     ### 优化记录
 
