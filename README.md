@@ -11,6 +11,8 @@
     
     * [`__weak`和`__block`的作用](/lang_feature/属性修饰符分别的作用.md?id=__weak和__block的作用)
 
+    * 如何让自定义对象支持copy操作
+
     * `__block`在ARC和MRC下的作用一样吗
     
     * [`nonatomic` 和 `atomic`的作用](/lang_feature/属性修饰符分别的作用.md?id=nonatomic和atomic的作用)
@@ -26,6 +28,8 @@
     * [autorelease和autoreleasePool](/lang_feature/autorelease和autoreleasepool.md)
 
     * autoreleasePool的实现原理
+
+    * 在子线程调用autorelease会如何
 
     * 如何定义私有属性和私有方法
 
@@ -95,7 +99,7 @@
 
     * 同步一定是在当前线程执行吗
 
-    * 串行队列一定是只有一条线程去执行这个队列中的任务吗
+    * 串行队列一定是只有一条线程去执行这个队列中的任务吗 / 将任务同步提交到一个串行队列为什么是当前线程执行
 
     * 什么是线程同步。实现线程同步的方式
 
@@ -181,29 +185,35 @@
 
         * 如何在子线程中schedule一个NSTimer
 
+        * 当APP进入后台之后，NSTimer还会继续执行吗。RunLoop会休眠吗
+
+        * dispatch_source在页面退出之后会释放吗 NSTimer会释放吗
+
     * [通知的观察者在销毁的时候需要主动将自己从通知中心移除吗](/system_feature/remove_observer_from_notificationcenter.md)
 
     * [集合的遍历方式](/system_feature/集合的遍历.md)
 
     * [如何在遍历数组的时候删除元素](/system_feature/集合的遍历.md)
 
+    * iOS中`NSString`的`hash`方法，只能比较96字节的字符。当字符串超过长度之后，取字符串的前32后32中32字符去进行比较。即只要这96个字符相同，那么字符串的hash值就会是相同的
+
 * ## 开发笔记
 
-    * [开发中的技巧](/custom_kit/开发中的技巧.md)
+    * [开发中的技巧](/my_note/开发中的技巧.md)
 
     ### 功能实现
 
-    * [瀑布流的实现](/custom_kit/瀑布流的实现.md)
+    * [瀑布流的实现](/my_note/瀑布流的实现.md)
 
-    * [下拉刷新的实现](/custom_kit/下拉刷新控件的实现思路.md)
+    * [下拉刷新的实现](/my_note/下拉刷新控件的实现思路.md)
 
-    * [iOS中的单例模式实现](/custom_kit/singleton.md)
+    * [iOS中的单例模式实现](/my_note/singleton.md)
 
     * OC如何实现函数式编程语法
 
-    * [实现网络请求的顺序执行及方案比较](/custom_kit/network_serial.md)
+    * [实现网络请求的顺序执行及方案比较](/my_note/network_serial.md)
 
-    * [AFNetworking与信号量使用时导致的死锁](/custom_kit/AFN_Semaphore_deadlock.md)
+    * [AFNetworking与信号量使用时导致的死锁](/my_note/AFN_Semaphore_deadlock.md)
 
     ### 优化记录
 
@@ -219,13 +229,21 @@
 
     * [如何追踪crash，线上crash率的追踪]()
 
+    * 如何进行crash保护。比如消息转发后找不到方法时避免崩溃。比如数组越界时如何避免crash。数组字典插入空值时通过setvalue方法允许插入空值操作。
+
     * 面向对象的设计原则：SOLID原则
 
     * 什么是简单工厂模式、工厂模式、抽象工厂模式
 
     * iOS中装饰器模式如何实现
 
-    * [iOS中的单例模式实现](/custom_kit/singleton.md)
+    * iOS中的target-action机制
+
+    * [iOS中的单例模式实现](/my_note/singleton.md)
+
+    * 如何设计在本地缓存数据与服务端数据一致时,服务端不返回最新数据
+
+        参考HTTP304状态码实现机制 ETag
 
 ***
 
@@ -253,6 +271,8 @@
 
     * 堆排序算法
 
+    * 两个长字符，如何快速比较是否相同
+
 ## 辅助工具的使用
 
 * [LLDB命令使用]()
@@ -268,6 +288,8 @@
 * [`xcodebuild`使用旧版本编译系统](/assist_tool/change_xcode_build.md)
 
 * [多XCode版本时更改`xcodebuild`使用的XCode版本](/assist_tool/change_xcode_build.md)
+
+* [XCode快捷键](/assist_tool/xcode_keymap.md)
 
 ## 知识扩展
 
