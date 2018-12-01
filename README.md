@@ -151,6 +151,8 @@
 
         * [如何关闭KVO和手动触发KVO](/system_feature/KVO/如何关闭KVO和手动触发KVO.md)
 
+        * 重写了setter方法还会走KVO吗
+
         * [KVO的基本使用示例](/system_feature/KVO/KVO的基本使用.md)
     
     * ### [UITableView]
