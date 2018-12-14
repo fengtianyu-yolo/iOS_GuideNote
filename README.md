@@ -203,6 +203,8 @@
 
     * [开发中的技巧](/my_note/开发中的技巧.md)
 
+    * [RAC的最最基本使用](/my_note/RAC_base_use.md)
+
     ### 功能实现
 
     * [瀑布流的实现](/my_note/瀑布流的实现.md)

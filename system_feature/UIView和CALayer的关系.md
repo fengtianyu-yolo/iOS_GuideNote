@@ -76,7 +76,7 @@
 
 我们可以发现，当动画开始之后但未结束时。如下图
 
-![animating](https://note.youdao.com/yws/public/resource/8013976dc46521ac2fc644c7bd2014c4/xmlnote/WEBRESOURCE38b2de2422f962edb3c66ee802a8e939/7623)
+![animating](https://github.com/cocacola-ty/Images/blob/master/animate_mid.jpg?raw=true)
 
 A 为动画开始之前的位置
 
