@@ -89,3 +89,13 @@ NS_ASSUME_NONNULL_END
 ```
 **这对宏定义的意思是在这对宏之间的所有属性、参数、返回值等都是不可空的。如果需要可以为空需要单独指明**
 
+宏定义的内容如下
+
+```
+#define NS_ASSUME_NONNULL_BEGIN _Pragma("clang assume_nonnull begin")
+#define NS_ASSUME_NONNULL_END   _Pragma("clang assume_nonnull end")
+```
+
+## 参考链接
+
+https://kangzubin.com/nullability-and-objective-c/?utm_source=tuicool&utm_medium=referral
