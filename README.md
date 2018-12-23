@@ -231,6 +231,8 @@
 
     * [ipa包大小优化点记录](/optimize/ipa包大小优化点记录.md)
 
+    * [pod库优化过程记录](/optimize/pod_optimize.md)
+
 * ## 工程设计问题
 
     * [如何追踪crash，线上crash率的追踪]()
