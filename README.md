@@ -231,7 +231,7 @@
 
     * [ipa包大小优化点记录](/optimize/ipa包大小优化点记录.md)
 
-    * [pod库优化过程记录](/optimize/pod_optimize.md)
+    * [组件化过程中私有Pod库优化过程记录](/optimize/pod_optimize.md)
 
 * ## 工程设计问题
 
@@ -252,6 +252,8 @@
     * 如何设计在本地缓存数据与服务端数据一致时,服务端不返回最新数据
 
         参考HTTP304状态码实现机制 ETag
+	
+	* [当设计一个模块或升级一个模块时需要考虑的内容](/my_note/module_design.md)
 
 ***
 
