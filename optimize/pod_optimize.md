@@ -81,6 +81,8 @@ use_source=1 pod install
 
 在源码和framework切换的时候如果出现拉取到一个空文件夹时，删除一下缓存再重新尝试 `pod cache clean --all`。并且同时删除`Pods`文件夹中的该模块
 
+*如果经常需要进行源码和framework的切换时，可以通过Podfile中`pre_install`这个hook来做缓存清理的操作*
+
 ### pod package 进行打包的详细说明
 
 ```
@@ -105,9 +107,44 @@ pod package MyPod.podspec --exclude-deps --no-mangle --spec-sources=git@gitlab.c
 
 ## 遇到的问题
 
-1. 推spec时，xcodebuild使用的最新的构建系统，编译不通过
+### 1. 推spec时，xcodebuild使用的最新的构建系统，编译不通过
 
-2. 改用framework后头文件要用<>引用
+### 2. 改用framework后头文件要改用<>方式引用
+
+将Pod库打包成framework之后，我们需要使用该Pod库中的文件时，需要通过尖括号的引用方式`import <xx/xx.h>`来导入头文件，否则会报找不到头文件的错误。
+
+如果之前是使用的源码方式，切换更改为framework方式之后要将所有的引用方式更改为尖括号的引用方式。
+
+如果仍然想使用双引号的引用方式。可以按照如下方式添加配置
+
+在Podfile中添加下面的代码
+
+```
+post_install do |installer|
+
+    installer.pods_project.targets.each do |target|
+
+        project.build_configurations.each do |config|
+            Pod::UI.puts "add configuration..."
+            target.build_settings['FRAMEWORK_SEARCH_PATHS'] = "${SRCROOT}/**"
+            target.build_settings['HEADER_SEARCH_PATHS'] = "${SRCROOT}/**"
+        end
+
+    end
+end
+```
+
+这段代码的作用是在执行`pod install`之后，在每个Pod的target中的`build setttings`中的`framework search path`和`header search path`选项添加`${SRCROOT}/**`
+
+即如图所示的位置
+
+![pod-target-setting](https://github.com/cocacola-ty/Images/blob/master/pod_target_build_setting.png?raw=true)
+
+上面代码中的`FRAMEWORK_SEARCH_PATHS`字段和`HEADER_SEARCH_PATHS`这两个字段名可以在`Pods/Pods.xcodeproj/project.pbxproj`中找到。
+
+`${SRCROOT}/**` 中的`${SRCROOT}`指的是工程的根目录也就是和xx.xcodeproj同级的目录 。`/**`则是指下面的所有子目录
+
+还可能会用的变量有`${PODS_ROOT}`,这个变量的定义是`${SRCROOT}/Pods`。也就是`Pods`文件夹位置
 
 ## 实现代码提交后自动完成打包过程
 
@@ -123,7 +160,19 @@ pod package MyPod.podspec --exclude-deps --no-mangle --spec-sources=git@gitlab.c
 
     如果没有这行内容，则认为没有这个判断。查找文件中的`s.source_file`,替换为判断条件
 
-2. 将当前podspec的version增加1
+2. 更改当前podspec的version
+
+    首先通过`git tag | tail -1` 获取当前的tag
+
+    通过字符串处理，将tag的最后一位增加1
+
+    以该字符串作为最新的version
+
+    修改过程：
+
+    首先将当前读取的行去掉所有空格，检查是否有`version=`内容
+
+    通过正则表达式替换`""`或`''`之间的内容
 
 3. 记录上一步的version。对当前代码按照version打tag。
 
@@ -132,3 +181,9 @@ pod package MyPod.podspec --exclude-deps --no-mangle --spec-sources=git@gitlab.c
 4. 调用pod package命令进行打包
 
 5. 移动framework的所在文件夹
+
+6. 删除构建过程产生的文件夹
+
+7. 提交framework
+
+8. 更改podspec的version，指向提交framework之后的tag
