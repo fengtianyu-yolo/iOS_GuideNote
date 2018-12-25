@@ -91,7 +91,7 @@ pod package MyPod.podspec --exclude-deps --no-mangle --spec-sources=git@gitlab.c
 
 #### 参数说明
 
-* `--exclude-deps`
+* **`--exclude-deps`** ✨
     
     打包的时候不将依赖的库打包进去。
     
@@ -145,6 +145,10 @@ end
 `${SRCROOT}/**` 中的`${SRCROOT}`指的是工程的根目录也就是和xx.xcodeproj同级的目录 。`/**`则是指下面的所有子目录
 
 还可能会用的变量有`${PODS_ROOT}`,这个变量的定义是`${SRCROOT}/Pods`。也就是`Pods`文件夹位置
+
+### 3. 经常切换时源码和framework时清理缓存的操作
+
+如果想自动的执行缓存清理操作可以考虑通过`Podfile`的`per_install`这个hook去实现。
 
 ## 实现代码提交后自动完成打包过程
 
