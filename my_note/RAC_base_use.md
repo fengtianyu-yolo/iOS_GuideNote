@@ -44,6 +44,23 @@ RAC(self, content) = self.textField.rac_textSignal;
 
 ### RACCommand 
 
+#### 使用场景：点击按钮的事件响应
+
+在ViewModel中创建一个`RACCommand`
+
+```
+RACCommand *command = [RACCommand alloc] initWithSignalBlock:
+
+```
+
+当viewController中的按钮点击之后，执行这个command
+
+```
+UIButton *btn = [UIButton new] rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *btn) {
+            [vm.command execute];
+        }];
+```
+
 ## UIKit 扩展
 
 ### UIButton
