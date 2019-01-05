@@ -255,6 +255,32 @@
 	
 	* [当设计一个模块或升级一个模块时需要考虑的内容](/my_note/module_design.md)
 
+## 工具链的使用
+
+* [LLDB命令使用]()
+
+*  [XCode缓存清理目录]()
+
+* [`project.pbxproj `的解析及脚本修改证书配置思路实现](/assist_tool/project_pbxproj文件解析.md)
+
+* [xcodebuild命令进行打包]()
+
+* [XCode10下如何切换编译系统](/assist_tool/change_xcode_build.md)
+
+* [`xcodebuild`使用旧版本编译系统](/assist_tool/change_xcode_build.md)
+
+* [多XCode版本时更改`xcodebuild`使用的XCode版本](/assist_tool/change_xcode_build.md)
+
+* [XCode快捷键](/assist_tool/xcode_keymap.md)
+
+* gitlab的自动化使用
+
+	* 服务端hook的使用-实现提交代码后自动构建framework
+
+	* pipelines的使用
+
+	* Auto DevOps的使用
+
 ***
 
 * ## 计算机基础问题
@@ -282,24 +308,6 @@
     * 堆排序算法
 
     * 两个长字符，如何快速比较是否相同
-
-## 辅助工具的使用
-
-* [LLDB命令使用]()
-
-*  [XCode缓存清理目录]()
-
-* [`project.pbxproj `的解析及脚本修改证书配置思路实现](/assist_tool/project_pbxproj文件解析.md)
-
-* [xcodebuild命令进行打包]()
-
-* [XCode10下如何切换编译系统](/assist_tool/change_xcode_build.md)
-
-* [`xcodebuild`使用旧版本编译系统](/assist_tool/change_xcode_build.md)
-
-* [多XCode版本时更改`xcodebuild`使用的XCode版本](/assist_tool/change_xcode_build.md)
-
-* [XCode快捷键](/assist_tool/xcode_keymap.md)
 
 ## 知识扩展
 
