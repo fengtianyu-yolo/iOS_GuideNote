@@ -73,6 +73,8 @@ RACCommand *command =  [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id i
 
 `RACCommand`的返回值是一个信号。所以可以将请求的结果值由最后的信号发出去。**这里需要注意：数据发送完毕之后必须调用`[subscriber sendCompleted]`否则这个命令一直处于执行中。**
 
+##### `RACComand`的执行
+
 上面是创建了一个`RACCommand`。这个命令的执行是通过下面的方式。
 
 当`viewController`中的按钮点击之后，执行这个command
@@ -92,7 +94,7 @@ btn.rac_command = vm.command;
 
 这样当点击按钮之后就会去执行这个command。
 
-##### 第二种数据传递方式
+##### 第一种获取command执行结果数据的方式
 
 上面的方式是将请求结果放在`RACCommand`返回的信号中。也可以在viewModel中定义一个属性来存放返回的结果值。这样vc中就不用去订阅`RACComand`的信号了，监听存放数据的属性值的变化就行了。如下所示。
 
@@ -120,7 +122,7 @@ RACCommand *command =  [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id i
 }];
 ```
 
-#### `executionSignals`属性 
+##### 第二种获取command执行结果数据的方式 - `executionSignals`属性 
 
 这个信号就是command执行之后返回的信号。
 
