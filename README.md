@@ -169,6 +169,10 @@
 
         * [控制器的视图加载和生命周期 / vc中的view什么时候创建 / loadView的作用 / vc init之后有视图吗](/system_feature/ViewController视图加载和生命周期.md)
 
+    * ### [UITextField]
+
+        * [UITextField常用bug]
+
     * [load方法和initalize方法](/system_feature/load方法和initalize方法.md)
 
     * 如何去设计一个通知中心 / 通知中心的实现
@@ -202,6 +206,8 @@
     * iOS中`NSString`的`hash`方法，只能比较96字节的字符。当字符串超过长度之后，取字符串的前32后32中32字符去进行比较。即只要这96个字符相同，那么字符串的hash值就会是相同的
 
 * ## 开发笔记
+
+    * [工程配置时的常见问题](/my_note/project_config_issue.md)
 
     * [开发规范和技巧](/my_note/开发规范和技巧.md)
 
