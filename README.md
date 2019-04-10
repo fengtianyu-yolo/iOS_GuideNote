@@ -171,7 +171,7 @@
 
     * ### [UITextField]
 
-        * [UITextField常用bug]
+        * [UITextField常见bug]
 
     * [load方法和initalize方法](/system_feature/load方法和initalize方法.md)
 
@@ -209,10 +209,6 @@
 
     * [工程配置时的常见问题](/my_note/project_config_issue.md)
 
-    * [开发规范和技巧](/my_note/开发规范和技巧.md)
-
-    * [代码规范](/my_note/code_rule.md)
-
     * [RAC的最最基本使用](/my_note/RAC_base_use.md)
 
     ### 功能实现
@@ -245,27 +241,9 @@
 
     * [通过Makefile统一团队中的工具版本]()
 
-* ## 工程设计问题
+    * [开发规则和技巧](/my_note/开发规范和技巧.md)
 
-    * [如何追踪crash，线上crash率的追踪]()
-
-    * 如何进行crash保护。比如消息转发后找不到方法时避免崩溃。比如数组越界时如何避免crash。数组字典插入空值时通过setvalue方法允许插入空值操作。
-
-    * 面向对象的设计原则：SOLID原则
-
-    * 什么是简单工厂模式、工厂模式、抽象工厂模式
-
-    * iOS中装饰器模式如何实现
-
-    * iOS中的target-action机制
-
-    * [iOS中的单例模式实现](/my_note/singleton.md)
-
-    * 如何设计在本地缓存数据与服务端数据一致时,服务端不返回最新数据
-
-        参考HTTP304状态码实现机制 ETag
-	
-	* [当设计一个模块或升级一个模块时需要考虑的内容](/my_note/module_design.md)
+    * [代码规范](/my_note/code_rule.md)
 
 ## 开发工具的使用
 
@@ -294,6 +272,28 @@
 	* pipelines的使用
 
 	* Auto DevOps的使用
+
+* ## 工程设计问题
+
+    * [如何追踪crash，线上crash率的追踪]()
+
+    * 如何进行crash保护。比如消息转发后找不到方法时避免崩溃。比如数组越界时如何避免crash。数组字典插入空值时通过setvalue方法允许插入空值操作。
+
+    * 面向对象的设计原则：SOLID原则
+
+    * 什么是简单工厂模式、工厂模式、抽象工厂模式
+
+    * iOS中装饰器模式如何实现
+
+    * iOS中的target-action机制
+
+    * [iOS中的单例模式实现](/my_note/singleton.md)
+
+    * 如何设计在本地缓存数据与服务端数据一致时,服务端不返回最新数据
+
+        参考HTTP304状态码实现机制 ETag
+    
+    * [当设计一个模块或升级一个模块时需要考虑的内容](/my_note/module_design.md)
 
 ***
 
