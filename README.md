@@ -211,6 +211,8 @@
 
     * [开发规范和技巧](/my_note/开发规范和技巧.md)
 
+    * [代码规范](/my_note/code_rule.md)
+
     * [RAC的最最基本使用](/my_note/RAC_base_use.md)
 
     ### 功能实现
@@ -239,6 +241,10 @@
 
     * [组件化过程中私有Pod库优化过程记录](/optimize/pod_optimize.md)
 
+    ### 工程管理
+
+    * [通过Makefile统一团队中的工具版本]()
+
 * ## 工程设计问题
 
     * [如何追踪crash，线上crash率的追踪]()
@@ -261,7 +267,7 @@
 	
 	* [当设计一个模块或升级一个模块时需要考虑的内容](/my_note/module_design.md)
 
-## 工具链的使用
+## 开发工具的使用
 
 * [LLDB命令使用]()
 
@@ -278,6 +284,8 @@
 * [多XCode版本时更改`xcodebuild`使用的XCode版本](/assist_tool/change_xcode_build.md)
 
 * [XCode快捷键](/assist_tool/xcode_keymap.md)
+
+* [XCode Build Setting中的设置项](/assist_tool/)
 
 * gitlab的自动化使用
 
