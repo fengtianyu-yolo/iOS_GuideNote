@@ -14,55 +14,41 @@
 
 	生命周期方法
 
-	*加入到自定义代码片段中, 快捷键使用`mark_lifecycle`*
-
 * `#pragma mark - Private Method`
 
 	私有方法
 
 	比如自定义视图的布局等
 
-	*加入到自定义代码片段中, 快捷键使用`mark_privatemethod`*
-
 * `#pragma mark - Public Method`
 
 	对外提供方法
-
-	*加入到自定义代码片段中, 快捷键使用`mark_publicmethod`*
 
 * `#pragma mark - Event Action` 
 
 	事件响应
 
-	*加入到自定义代码片段中, 快捷键使用`mark_eventaction`*
-
 * `#pragma mark - Delegate Datasource`
 
 	代理方法
-
-	*加入到自定义代码片段中, 快捷键使用`mark_delegate`*
 
 * `#pragma mark - Getter Setter`
 
 	懒加载方法
 
-	*加入到自定义代码片段中, 快捷键使用`mark_getter`*
+### 使用统一的自定义代码片段
 
-### 自定义代码段及快捷键
+统一的代码片段的作用：
 
-通过定义一些自定义代码片段，来保证每次对相同代码都是统一格式，第二可以减少代码书写量，通过代码片段直接生成
+1. 生成的代码格式是统一的
 
-#### 属性的代码片段
+2. 提高效率，减少重复代码的书写
 
-* `prop_strong`
+### 统一的自定义命名
 
-	```
-    	@property (nonatomic, strong) <#NSString#> *<#str#>;
-	```
+统一自定义方法名和属性名，方便查找相关代码。
 
-### 自定义方法名
-
-统一自定义方法名，方便查找相关代码。
+#### 自定义方法名
 
 * 自定义视图布局的方法名
 
@@ -76,6 +62,16 @@
 
 	`subscribeSignals`
 
+#### 自定义变量名
+
+* 说明类的Label 
+
+	`textLabel`
+
+	`explainLabel`
+
 ## 通过模板统一代码格式
+
+通过模板使得创建出来的文件已经将上面的格式规范好
 
 创建自定义模板

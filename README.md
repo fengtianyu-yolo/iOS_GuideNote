@@ -245,6 +245,8 @@
 
     * [代码规范](/my_note/code_rule.md)
 
+    * [自定义代码片段](/my_note/code_snippets.md)
+
 ## 开发工具的使用
 
 * [LLDB命令使用]()
