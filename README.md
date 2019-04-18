@@ -237,6 +237,8 @@
 
     * [组件化过程中私有Pod库优化过程记录](/optimize/pod_optimize.md)
 
+    * MVVM工程结构示例
+
     ### 工程管理
 
     * [通过Makefile统一团队中的工具版本]()
@@ -246,6 +248,8 @@
     * [代码规范](/my_note/code_rule.md)
 
     * [自定义代码片段](/my_note/code_snippets.md)
+
+    * 通过Clang-Format 在提交时做格式化更改
 
 ## 开发工具的使用
 
