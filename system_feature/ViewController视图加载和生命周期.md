@@ -31,7 +31,7 @@ vc.view.backgroundColor = [UIColor redColor];
 
 如果想通过代码创建控制器的视图，重写控制器的`loadView`方法即可。
 
-并且不需要调用`[super loadView]`,因为，当调用`[super loadView]`会默认创建一个空白视图，既然已经自定义视图了，默认创建的视图就不需要了。
+**并且不需要调用`[super loadView]`**,因为，当调用`[super loadView]`会默认创建一个空白视图，既然已经自定义视图了，默认创建的视图就不需要了。
 
 # 控制器的生命周期
 
@@ -52,3 +52,26 @@ vc.view.backgroundColor = [UIColor redColor];
 8. `viewWillDisappear` - 视图将要消失
 
 9. `viewDidDisappear` - 视图完全消失
+
+## `loadView`和`setter`方法的调用顺序
+
+取决于`view`的调用时机。如下所示
+
+```
+	UIViewController *vc = [UIViewController new];
+	vc.view.backgroundColor = [UIColor redColor];
+	vc.str = @"";
+```
+
+由于创建了控制器之后，就调用`vc.view`，所以会立即执行`loadView`去创建视图。
+
+然后再执行`setter`方法
+
+而如果以下面的方式
+
+```
+	UIViewController *vc = [UIViewController new];
+	vc.str = @"";
+```
+
+由于没有调用控制器的视图，所以不会执行`loadView`方法
