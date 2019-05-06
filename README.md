@@ -71,10 +71,9 @@
 
 * [为什么block中的对象可以在对象的作用域之外使用。block截获对象的原理](/block/SAQ.md)
 
-
 ### 多线程
 
-* 什么是GCD
+* [什么是GCD](/gcd/gcd的基本概念.md)
 
 * 线程之间通信方式
 
@@ -110,7 +109,7 @@
 
 ***
 
-## 二、 熟悉API的使用和常见问题
+## 二、 UIKit
 
 ### [UITableView]
 
@@ -128,7 +127,15 @@
 
 * [UITextField常见bug]
 
-* [iOS事件响应链和事件传递机制](/system_feature/iOS的事件传递链和响应链.md)
+## 三、Foundation
+
+### [NSString]
+
+* iOS中`NSString`的`hash`方法，只能比较96字节的字符。当字符串超过长度之后，取字符串的前32后32中32字符去进行比较。即只要这96个字符相同，那么字符串的hash值就会是相同的
+
+***
+
+## 四、 熟悉iOS中提供的一些系统机制
 
 ### iOS中动画处理相关内容
 
@@ -138,7 +145,9 @@
 
     * [UIView和CALayer的关系](/system_feature/UIView和CALayer的关系)
 
-### UIKit
+### 常见的系统基本处理机制
+
+* [iOS事件响应链和事件传递机制](/system_feature/iOS的事件传递链和响应链.md)
 
 * [load方法和initalize方法](/system_feature/load方法和initalize方法.md)
 
@@ -170,18 +179,11 @@
 
 * [如何在遍历数组的时候删除元素](/system_feature/集合的遍历.md)
 
-* iOS中`NSString`的`hash`方法，只能比较96字节的字符。当字符串超过长度之后，取字符串的前32后32中32字符去进行比较。即只要这96个字符相同，那么字符串的hash值就会是相同的
-
-
 * [iOS的drawRect方法和重绘机制](/system_feature/iOS的drawRect方法和重绘机制.md)
 
 * 使用drawRect有什么影响
 
 * [iOS的渲染机制和卡顿原因](/system_feature/渲染机制和卡顿原因.md)
-
-***
-
-## 三、 熟悉iOS中提供的一些系统机制
 
 ### Runloop
 
@@ -261,6 +263,8 @@
 
 * 装饰器模式如何实现及如何应用
 
+* 怎么将代码写的有设计感，思考如何重构
+
 ### 3 代码规范
 
 制定一套自己的写代码的规范，带来的作用：
@@ -279,9 +283,13 @@
 
 * [通过Makefile统一团队中的工具版本]()
 
+*** 
+
 ## 五、开发笔记
 
 ### 第三方库的学习
+
+#### 学习RAC的用法
 
 * [RAC的最最基本用法](/my_note/RAC_base_use.md)
 
@@ -329,7 +337,11 @@
 
 ### 小工具的实现
 
+* [通过linkMap文件分析工程中未使用方法](/assist_tool/查找工程中未使用的方法.md)
+
 * [`project.pbxproj `的解析及脚本修改证书配置思路实现](/assist_tool/project_pbxproj文件解析.md)
+
+* [自动打包脚本的实现](/assist_tool/自动打包脚本的实现.md)
 
 * gitlab的自动化使用
 
