@@ -37,3 +37,47 @@
 ## 同步一定是在当前线程执行吗
 
 ## 串行队列一定是只有一条线程去执行这个队列中的任务吗
+
+**不是**
+
+队列和线程并没有绑定关系。是由系统来调度线程去队列中取任务去执行。
+
+如下示例代码所示 
+
+```
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    dispatch_queue_t queue = dispatch_queue_create("custom_queue", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_async(queue, ^{
+        NSLog(@"异步向串行队列中添加的任务 %@", [NSThread currentThread]);
+    });
+    
+    dispatch_sync(queue, ^{
+        NSLog(@"同步向串行队列中添加的任务开始执行");
+        sleep(3);
+        NSLog(@"同步向串行队列中添加的任务执行完毕 %@", [NSThread currentThread]);
+    });
+    
+    NSLog(@"主线程执行");
+    
+}
+```
+
+输出结果
+
+```
+
+	>>> 异步向串行队列中添加的任务 <NSThread: 0x6000033caf00>{number = 3, name = (null)}
+
+	>>> 同步向串行队列中添加的任务开始执行
+
+	>>> 同步向串行队列中添加的任务务执行完毕 <NSThread: 0x6000033953c0>{number = 1, name = main}
+
+	>>> 主线程执行
+
+```
+
+可以看到如上结果所示，在串行队列`queue`中的任务并不是只有一条线程来执行。
+
