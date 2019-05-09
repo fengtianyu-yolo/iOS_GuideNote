@@ -251,6 +251,8 @@
 
 *  [XCode缓存清理目录]()
 
+* [XCode全屏时同时显示模拟器](/assist_tool/xcode_simulator_fullscreen.md)
+
 #### 调试工具的使用
 
 * [LLDB命令使用]()
