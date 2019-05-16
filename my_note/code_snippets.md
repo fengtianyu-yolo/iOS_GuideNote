@@ -36,7 +36,7 @@
 
 ## Mark的代码片段
 
-* 声明周期代码段
+* 生命周期代码段
 
 	快捷键 ：`mark_lifecycle`
 
@@ -44,6 +44,16 @@
 
 	```
 	#pragma mark - Life Cycle
+	```
+
+* 复写父类方法代码段
+
+	快捷键 ：`mark_override`
+
+	Title : Mark Override Method
+
+	```
+	#pragma mark - Override Method
 	```
 
 * 初始化方法代码段
