@@ -129,6 +129,10 @@
 
 * [UITextField常见bug]
 
+### [UIButton]
+
+* [`imageEdgeInsets`和`imageEdgeInsets`属性如何使用](/UIKit/UIButton/how_to_use_imageEdgeInsets_titleEdgeInsets.md)
+
 ## 三、Foundation
 
 ### [NSString]
@@ -136,6 +140,10 @@
 * iOS中`NSString`的`hash`方法，只能比较96字节的字符。当字符串超过长度之后，取字符串的前32后32中32字符去进行比较。即只要这96个字符相同，那么字符串的hash值就会是相同的
 
 * [正则表达式]
+
+### [NSArray]
+
+* [通过KVC可以直接对数组进行的操作](/Foundation/NSArray/kvc_array.md)
 
 ***
 
@@ -289,6 +297,8 @@
 
 * [通过Makefile统一团队中的工具版本]()
 
+* OCLint进行静态代码检查
+
 *** 
 
 ## 六、开发笔记
@@ -324,10 +334,18 @@
 * [流畅度优化记录](/optimize/流畅度优化记录.md)
 
 * [APP流量优化记录](/optimize/流畅度优化记录.md?id=流量优化过程记录)
+    
+    * 网络层应该提供取消网络请求的方法，当退出页面时及时的取消网络请求，降低带宽的使用
+
+    * 优化图片资源
+
+    * 优化接口
 
 * [ipa包大小优化点记录](/optimize/ipa包大小优化点记录.md)
 
 * [组件化过程中私有Pod库优化过程记录](/optimize/pod_optimize.md)
+
+
 
 ### 工程或模块设计时需要考虑的问题
 
