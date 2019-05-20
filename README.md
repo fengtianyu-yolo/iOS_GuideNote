@@ -127,7 +127,7 @@
 
 ### [UITextField]
 
-* [UITextField常见bug]
+* [UITextField常见bug](/UIKit/UITextField/uitextfield_faq.md)
 
 ### [UIButton]
 
@@ -308,6 +308,8 @@
 #### 学习RAC的用法
 
 * [RAC的最最基本用法](/my_note/RAC_base_use.md)
+
+* [RACCommand的基本用法](/my_note/rac/rac_command.md)
 
 ### 效果实现
 
