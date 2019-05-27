@@ -327,6 +327,12 @@
 
 ### 常见的非代码的问题
 
+#### CocoaPods的使用
+
+* [Pod库lint时报错不支持i386架构的解决方案](/my_note/pods/resolve_pod_i386_issue.md)
+
+#### 工程配置问题
+
 * [工程配置时的常见问题](/my_note/project_config_issue.md)
 
 ### 工程优化
@@ -346,8 +352,6 @@
 * [ipa包大小优化点记录](/optimize/ipa包大小优化点记录.md)
 
 * [组件化过程中私有Pod库优化过程记录](/optimize/pod_optimize.md)
-
-
 
 ### 工程或模块设计时需要考虑的问题
 
