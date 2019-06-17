@@ -89,7 +89,7 @@
 
     * 串行队列
 
-* 用过哪些锁，哪些锁的性能比较高
+* 用过哪些锁（自旋锁、互斥锁....），哪些锁的性能比较高
 
 * 队列和线程的关系
 
@@ -127,7 +127,7 @@
 
 ### [UITextField]
 
-* [UITextField常见bug](/UIKit/UITextField/uitextfield_faq.md)
+* [UITextField明密文切换问题：光标位置异常、字体更改、内容清空](/UIKit/UITextField/uitextfield_faq.md)
 
 ### [UIButton]
 
@@ -144,6 +144,12 @@
 ### [NSArray]
 
 * [通过KVC可以直接对数组进行的操作](/Foundation/NSArray/kvc_array.md)
+
+### [日期时间]
+
+* 判断指定时期是否在7天内的技巧
+
+* 判断指定日期是否同一天的技巧
 
 ***
 
@@ -330,6 +336,8 @@
 #### CocoaPods的使用
 
 * [Pod库lint时报错不支持i386架构的解决方案](/my_note/pods/resolve_pod_i386_issue.md)
+
+* [私有库中使用到的.a，未引用到库中的问题](/my_note/pods/)
 
 #### 工程配置问题
 
