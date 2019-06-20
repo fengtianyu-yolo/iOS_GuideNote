@@ -113,11 +113,11 @@
 
 ## 二、 UIKit
 
-### [UITableView]
+### 【UITableView】
 
 * [为什么cell不从tableView的顶点开始布局](/system_feature/tableview_adjustinset.md)
 
-### [UIViewController]
+### 【UIViewController】
 
 * [UIViewController常见问题](/system_feature/vc_faq.md)
 
@@ -125,43 +125,89 @@
 
 * [控制器的视图加载和生命周期 / vc中的view什么时候创建 / loadView的作用 / vc init之后有视图吗](/system_feature/ViewController视图加载和生命周期.md)
 
-### [UITextField]
+### 【UITextField】
 
 * [UITextField明密文切换问题：光标位置异常、字体更改、内容清空](/UIKit/UITextField/uitextfield_faq.md)
 
-### [UIButton]
+### 【UIButton】
 
 * [`imageEdgeInsets`和`imageEdgeInsets`属性如何使用](/UIKit/UIButton/how_to_use_imageEdgeInsets_titleEdgeInsets.md)
 
 ## 三、Foundation
 
-### [NSString]
+### 【NSString】
 
 * iOS中`NSString`的`hash`方法，只能比较96字节的字符。当字符串超过长度之后，取字符串的前32后32中32字符去进行比较。即只要这96个字符相同，那么字符串的hash值就会是相同的
 
 * [正则表达式]
 
-### [NSArray]
+### 【NSArray】
 
 * [通过KVC可以直接对数组进行的操作](/Foundation/NSArray/kvc_array.md)
 
-### [日期时间]
+### 【日期时间】
 
-* 判断指定时期是否在7天内的技巧
+* [技巧](/Foundation/NSDate/nsdate_tips.md)
 
-* 判断指定日期是否同一天的技巧
+    * 判断指定时期是否在7天内的技巧
+
+    * 判断指定日期是否同一天的技巧
 
 ***
 
-## 四、 熟悉iOS中提供的一些系统机制
+## 四、 iOS中的一些系统机制、系统模块
 
-### iOS中动画处理相关内容
+### 核心动画相关内容
+
+* 核心动画的核心机制
 
 * 执行动画的几种方式
 
     * 动画是如何渲染显示的，哪条线程执行的动画
 
     * [UIView和CALayer的关系](/system_feature/UIView和CALayer的关系)
+
+* 各种核心动画提供的方式
+
+* 各种动画效果的实现
+
+### KVO观察者机制
+
+* [KVO的实现原理](/system_feature/KVO/KVO的实现原理.md)
+
+    * [KVO使用注意点](/system_feature/KVO/KVO使用注意点.md)
+    
+    * [如何关闭KVO和手动触发KVO](/system_feature/KVO/如何关闭KVO和手动触发KVO.md)
+
+    * 重写了setter方法还会走KVO吗
+
+    * [KVO的基本使用示例](/system_feature/KVO/KVO的基本使用.md)
+    
+### Runtime
+
+* [消息转发机制](/runtime/消息转发机制.md)
+
+### Runloop
+
+* 什么是RunLoop，RunLoop的作用是什么
+
+* RunLoop在一个循环中是怎么做的，处理了哪些东西
+
+* RunLoop中有哪些东西
+
+* RunLoop和线程的关系
+
+* 系统基于RunLoop实现的功能
+
+* RunLoop的应用场景
+
+    * 基于RunLoop的机制，优化tableView滑动流畅度
+    
+* RunLoop间如何进行通信
+
+* 如何在RunLoop空闲的时候处理特定任务
+
+### iOS中的target-action机制
 
 ### 常见的系统基本处理机制
 
@@ -203,47 +249,71 @@
 
 * [iOS的渲染机制和卡顿原因](/system_feature/渲染机制和卡顿原因.md)
 
-### Runloop
+## 五、架构学习
 
-* 什么是RunLoop，RunLoop的作用是什么
+* 怎么写MVVM结构的代码
 
-* RunLoop在一个循环中是怎么做的，处理了哪些东西
+* 面向对象的设计原则：SOLID原则
 
-* RunLoop中有哪些东西
+* 什么是简单工厂模式、工厂模式、抽象工厂模式
 
-* RunLoop和线程的关系
+* 装饰器模式如何实现及如何应用
 
-* 系统基于RunLoop实现的功能
+* 怎么将代码写的有设计感，思考如何重构
 
-* RunLoop的应用场景
+## 六、开发与学习笔记
 
-    * 基于RunLoop的机制，优化tableView滑动流畅度
+### 第三方库的学习
+
+#### 源码分析与学习
+
+* AFNetworking的源码解析
+
+* SDWebImage的源码学习
+
+#### 学习RAC的用法
+
+* [RAC的最最基本用法](/my_note/RAC_base_use.md)
+
+* [RACCommand的基本用法](/my_note/rac/rac_command.md)
+
+### 效果实现
+
+* [瀑布流的实现](/my_note/瀑布流的实现.md)
+
+* [下拉刷新的实现](/my_note/下拉刷新控件的实现思路.md)
+
+* [iOS中的单例模式实现](/my_note/singleton.md)
+
+* OC如何实现函数式编程语法
+
+* [实现网络请求的顺序执行及方案比较](/my_note/network_serial.md)
+
+* [AFNetworking与信号量使用时导致的死锁](/my_note/AFN_Semaphore_deadlock.md)
+
+## 七、优化与提高
+
+* [视图调试工具的使用](/optimize/视图调试工具的使用.md)
+
+* [流畅度优化记录](/optimize/流畅度优化记录.md)
+
+* [APP流量优化记录](/optimize/流畅度优化记录.md?id=流量优化过程记录)
     
-* RunLoop间如何进行通信
+    * 网络层应该提供取消网络请求的方法，当退出页面时及时的取消网络请求，降低带宽的使用
 
-* 如何在RunLoop空闲的时候处理特定任务
+    * 优化图片资源
 
-### KVO观察者机制
+    * 优化接口
 
-* [KVO的实现原理](/system_feature/KVO/KVO的实现原理.md)
+* [ipa包大小优化点记录](/optimize/ipa包大小优化点记录.md)
 
-    * [KVO使用注意点](/system_feature/KVO/KVO使用注意点.md)
-    
-    * [如何关闭KVO和手动触发KVO](/system_feature/KVO/如何关闭KVO和手动触发KVO.md)
+* [组件化过程中私有Pod库优化过程记录](/optimize/pod_optimize.md)
 
-    * 重写了setter方法还会走KVO吗
-
-    * [KVO的基本使用示例](/system_feature/KVO/KVO的基本使用.md)
-    
-### Runtime
-
-* [消息转发机制](/runtime/消息转发机制.md)
-
-### iOS中的target-action机制
+* 启动速度优化
 
 ***
 
-## 五、 提高开发效率
+## 八、 提高开发效率
 
 ### 1 工具的使用：通过工具提高开发速度
 
@@ -273,19 +343,7 @@
 
 * [LLDB命令使用]()
 
-### 2 学习按照标准的架构来写：
-
-* 怎么写MVVM结构的代码
-
-* 面向对象的设计原则：SOLID原则
-
-* 什么是简单工厂模式、工厂模式、抽象工厂模式
-
-* 装饰器模式如何实现及如何应用
-
-* 怎么将代码写的有设计感，思考如何重构
-
-### 3 代码规范
+### 2 代码规范
 
 制定一套自己的写代码的规范，带来的作用：
 
@@ -297,7 +355,7 @@
 
 * [代码规范](/my_note/code_rule.md)
 
-### 4 团队工程的管理
+### 3 团队工程的管理
 
 * 通过Clang-Format 在提交时做格式化更改
 
@@ -306,30 +364,6 @@
 * OCLint进行静态代码检查
 
 *** 
-
-## 六、开发笔记
-
-### 第三方库的学习
-
-#### 学习RAC的用法
-
-* [RAC的最最基本用法](/my_note/RAC_base_use.md)
-
-* [RACCommand的基本用法](/my_note/rac/rac_command.md)
-
-### 效果实现
-
-* [瀑布流的实现](/my_note/瀑布流的实现.md)
-
-* [下拉刷新的实现](/my_note/下拉刷新控件的实现思路.md)
-
-* [iOS中的单例模式实现](/my_note/singleton.md)
-
-* OC如何实现函数式编程语法
-
-* [实现网络请求的顺序执行及方案比较](/my_note/network_serial.md)
-
-* [AFNetworking与信号量使用时导致的死锁](/my_note/AFN_Semaphore_deadlock.md)
 
 ### 常见的非代码的问题
 
@@ -342,24 +376,6 @@
 #### 工程配置问题
 
 * [工程配置时的常见问题](/my_note/project_config_issue.md)
-
-### 工程优化
-
-* [视图调试工具的使用](/optimize/视图调试工具的使用.md)
-
-* [流畅度优化记录](/optimize/流畅度优化记录.md)
-
-* [APP流量优化记录](/optimize/流畅度优化记录.md?id=流量优化过程记录)
-    
-    * 网络层应该提供取消网络请求的方法，当退出页面时及时的取消网络请求，降低带宽的使用
-
-    * 优化图片资源
-
-    * 优化接口
-
-* [ipa包大小优化点记录](/optimize/ipa包大小优化点记录.md)
-
-* [组件化过程中私有Pod库优化过程记录](/optimize/pod_optimize.md)
 
 ### 工程或模块设计时需要考虑的问题
 
@@ -389,7 +405,7 @@
 
     * Auto DevOps的使用
 
-## 六、其他知识扩展
+## 九、其他知识扩展
 
 ### 计算机基础问题
 
