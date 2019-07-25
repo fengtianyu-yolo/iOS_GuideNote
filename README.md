@@ -1,5 +1,5 @@
 
-# Guide For iOS Developer's Growth - iOS开发者学习成长过程
+# Guide For iOS Developer's Growth - iOS开发笔记本
 
 ## 一、 了解语言特性
 
@@ -159,6 +159,16 @@
 
 ### 核心动画相关内容
 
+* 核心动画
+
+    * [`CALayer`的基础概念](/system_feature/CoreAnimation/calayer_basic.md)
+
+    * [布局属性和坐标系统](/system_feature/calayer_coordinate.md)
+
+    * 通过`CALayer`可以实现的视觉效果
+
+    * 变换动画:位移、旋转、3D变换
+
 * 核心动画的核心机制
 
 * 执行动画的几种方式
@@ -275,7 +285,7 @@
 
 #### 学习RAC的用法
 
-* [RAC的最最基本用法](/my_note/RAC_base_use.md)
+* [RAC中的API怎么使用](/my_note/RAC_base_use.md)
 
 * [RACCommand的基本用法](/my_note/rac/rac_command.md)
 
