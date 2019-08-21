@@ -303,6 +303,8 @@
 
 * [AFNetworking与信号量使用时导致的死锁](/my_note/AFN_Semaphore_deadlock.md)
 
+***
+
 ## 七、优化与提高
 
 * [视图调试工具的使用](/optimize/视图调试工具的使用.md)
@@ -331,15 +333,13 @@
 
 ## 八、 提高开发效率
 
-### 1 工具的使用：通过工具提高开发速度
+### 1 开发工具的使用
 
 #### XCode的使用
 
 * [XCode快捷键](/assist_tool/xcode_keymap.md)
 
-* [添加自定义代码片段，减少重复代码输入](/my_note/code_snippets.md)
-
-* 使用自定义XCode的模板
+* [如何创建使用自定义XCode的模板]
 
 * [XCode Build Setting中的设置项](/assist_tool/)
 
@@ -371,6 +371,8 @@
 
 * [代码规范](/my_note/code_rule.md)
 
+* [自定义代码片段](/my_note/code_snippets.md)
+
 ### 3 团队工程的管理
 
 * 通过Clang-Format 在提交时做格式化更改
@@ -381,7 +383,7 @@
 
 *** 
 
-### 常见的非代码的问题
+## 常见的非代码的问题
 
 #### CocoaPods的使用
 
