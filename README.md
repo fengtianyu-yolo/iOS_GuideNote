@@ -375,9 +375,11 @@
 
 ### 3 团队工程的管理
 
-* 通过Clang-Format 在提交时做格式化更改
+* [Cocoapods保证使用统一的Pod库版本的方法](/my_note/pods/pod_version_manager.md)
 
 * [通过Makefile统一团队中的工具版本]()
+
+* 通过Clang-Format 在提交时做格式化更改
 
 * OCLint进行静态代码检查
 
