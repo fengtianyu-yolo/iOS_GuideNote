@@ -373,6 +373,10 @@
 
 ### 3 团队工程的管理
 
+* CocoaPods的统一
+    1. 通过homebrew 安装ruby。不要使用系统的ruby环境，方便升级和统一版本
+    2. 
+
 * 通过Clang-Format 在提交时做格式化更改
 
 * [通过Makefile统一团队中的工具版本]()
