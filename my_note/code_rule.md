@@ -8,7 +8,7 @@
 
 ## 代码书写规范
 
-### 代码分段
+### 代码分段规范
 
 * `#pragma mark - Life Cycle`
 

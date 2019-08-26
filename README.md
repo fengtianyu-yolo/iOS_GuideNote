@@ -303,6 +303,8 @@
 
 * [AFNetworking与信号量使用时导致的死锁](/my_note/AFN_Semaphore_deadlock.md)
 
+***
+
 ## 七、优化与提高
 
 * [视图调试工具的使用](/optimize/视图调试工具的使用.md)
@@ -331,15 +333,13 @@
 
 ## 八、 提高开发效率
 
-### 1 工具的使用：通过工具提高开发速度
+### 1 开发工具的使用
 
 #### XCode的使用
 
 * [XCode快捷键](/assist_tool/xcode_keymap.md)
 
-* [添加自定义代码片段，减少重复代码输入](/my_note/code_snippets.md)
-
-* 使用自定义XCode的模板
+* [如何创建使用自定义XCode的模板]
 
 * [XCode Build Setting中的设置项](/assist_tool/)
 
@@ -371,21 +371,27 @@
 
 * [代码规范](/my_note/code_rule.md)
 
+* [自定义代码片段](/my_note/code_snippets.md)
+
 ### 3 团队工程的管理
 
 * CocoaPods的统一
-    1. 通过homebrew 安装ruby。不要使用系统的ruby环境，方便升级和统一版本
+    1. 通过homebrew 安装ruby。不要使用系统的ruby环境，方便后期通过HomeBrew升级和统一ruby版本
     2. 
 
 * 通过Clang-Format 在提交时做格式化更改
 
+* [Cocoapods保证使用统一的Pod库版本的方法](/my_note/pods/pod_version_manager.md)
+
 * [通过Makefile统一团队中的工具版本]()
+
+* 通过Clang-Format 在提交时做格式化更改
 
 * OCLint进行静态代码检查
 
 *** 
 
-### 常见的非代码的问题
+## 常见的非代码的问题
 
 #### CocoaPods的使用
 

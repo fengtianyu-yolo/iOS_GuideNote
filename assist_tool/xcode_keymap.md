@@ -4,54 +4,54 @@
 
 * 移动焦点到其他区域 
 
-    ```
-    option + command + `
+	```
+    	option + command + `
     ```
 
 * 跳转到文件筛选框位置
 
-    ```
-    option + command + J
+	```
+    	option + command + J
     ```
 
 * 光标移动到编辑区
 
 	```
-	ctrl + `
+		ctrl + `
 	```
 
 * 光标移动到日志输出控制台区域 
 
 	```
-	command + shift + c
+		command + shift + c
 	```
 
 * 多点编辑 
 
-    ```
-    ctrl + shift + 点击的位置
+   	```
+	    ctrl + shift + 点击的位置
     ```
     
 * 光标移动到上一次编辑的位置
 
 	```
-	ctrl + |
+		ctrl + |
 	```
 
 * 光标移动到下一次编辑的位置
 
 	```
-	ctrl + shift + |
+		ctrl + shift + |
 	```
 
 * 显示日志输出控制台
 
 	```
-	command + shift + y
+		command + shift + y
 	```
 
 * 显示或隐藏左侧的文件导航栏
 
 	```
-	command + 0
+		command + 0
 	```
