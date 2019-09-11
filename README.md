@@ -109,6 +109,8 @@
 
     * `dispatch_after`
 
+#### [`NSOperation`](/gcd/nsoperation_usage.md)
+
 ***
 
 ## 二、 UIKit
@@ -401,7 +403,9 @@
 
 #### 工程配置问题
 
-* [工程配置时的常见问题](/my_note/project_config_issue.md)
+* [`Capabilities` 选项卡中一部分开关不显示](/my_note/project_config_issue.md)
+
+* [使用instrument调试app的时候不显示具体方法的问题](/my_note/project_config_issue.md)
 
 ### 工程或模块设计时需要考虑的问题
 
