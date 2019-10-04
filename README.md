@@ -137,6 +137,10 @@
 
 ## 三、Foundation
 
+### 【NSObject】
+
+* [关于`load`和`initialize`方法的几点认识](/Foundation/NSObject/load_initialize.md)
+
 ### 【NSString】
 
 * iOS中`NSString`的`hash`方法，只能比较96字节的字符。当字符串超过长度之后，取字符串的前32后32中32字符去进行比较。即只要这96个字符相同，那么字符串的hash值就会是相同的
