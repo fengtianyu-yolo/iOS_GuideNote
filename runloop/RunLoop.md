@@ -1,7 +1,9 @@
 
-### 什么是RunLoop, RunLoop的作用
+# Runloop全面简介
 
-#### 什么是RunLoop
+## 什么是RunLoop, RunLoop的作用
+
+### 什么是RunLoop
 
 RunLoop就是一个运行的循环，一旦开始这个循环如果没有退出消息就会一直运行着。这个循环中进行接收消息和处理消息。
 
@@ -9,7 +11,7 @@ RunLoop实际是一个对象,这个对象提供了一个入口函数，线程执
 
 而在这个循环中则处理程序运行过程中的各种事件，比如触摸事件、定时器事件等。事件处理完之后就会等待下一次事件的发生。
 
-#### 为什么需要RunLoop
+### 为什么需要RunLoop
 
 * 线程保活，使程序持续运行
 
@@ -19,7 +21,7 @@ RunLoop实际是一个对象,这个对象提供了一个入口函数，线程执
 
     RunLoop在没有事件处理的时候会使线程进入休眠，从而节省CPU资源，提高程序性能。
 
-### RunLoop在一个循环中是怎么做的，处理了哪些东西
+## RunLoop在一个循环中是怎么做的，处理了哪些东西
 
 1. RunLoop启动之前，会通知观察者，即将进入RunLoop。
 2. 发送一个通知，告诉观察者，将要开始处理定时器到时的事件  ?? 这一步是开始定时器计时 还是开始处理定时器的事件
@@ -40,36 +42,37 @@ RunLoop实际是一个对象,这个对象提供了一个入口函数，线程执
 
 > [苹果文档](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html#//apple_ref/doc/uid/10000057i-CH16-SW23)
 
-### RunLoop中有哪些东西 
+## RunLoop中有哪些东西 
 
-#### 观察者：CFRunLoopObserverRef
+### 观察者：CFRunLoopObserverRef
 
 这个观察者用于监听RunLoop中状态的改变，可以监听到的RunLoop的状态有下面几种
 
 ```
-typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
-    kCFRunLoopEntry = (1UL << 0),               // 即将进入Loop：1
-    kCFRunLoopBeforeTimers = (1UL << 1),        // 即将处理Timer：2    
-    kCFRunLoopBeforeSources = (1UL << 2),       // 即将处理Source：4
-    kCFRunLoopBeforeWaiting = (1UL << 5),       // 即将进入休眠：32
-    kCFRunLoopAfterWaiting = (1UL << 6),        // 即将从休眠中唤醒：64
-    kCFRunLoopExit = (1UL << 7),                // 即将从Loop中退出：128
-    kCFRunLoopAllActivities = 0x0FFFFFFFU       // 监听全部状态改变  
-}
+    typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
+        kCFRunLoopEntry = (1UL << 0),               // 即将进入Loop：1
+        kCFRunLoopBeforeTimers = (1UL << 1),        // 即将处理Timer：2    
+        kCFRunLoopBeforeSources = (1UL << 2),       // 即将处理Source：4
+        kCFRunLoopBeforeWaiting = (1UL << 5),       // 即将进入休眠：32
+        kCFRunLoopAfterWaiting = (1UL << 6),        // 即将从休眠中唤醒：64
+        kCFRunLoopExit = (1UL << 7),                // 即将从Loop中退出：128
+        kCFRunLoopAllActivities = 0x0FFFFFFFU       // 监听全部状态改变  
+    }
 ```
 
 示例，监听RunLoop的状态
+
 ```
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    CFRunLoopObserverRef ob = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
-        NSLog(@"%zd", activity);
-    });
-    CFRunLoopAddObserver(CFRunLoopGetCurrent(), ob, kCFRunLoopDefaultMode);
-}
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        CFRunLoopObserverRef ob = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+            NSLog(@"%zd", activity);
+        });
+        CFRunLoopAddObserver(CFRunLoopGetCurrent(), ob, kCFRunLoopDefaultMode);
+    }
 ```
 
-#### 事件源：CFRunLoopSourceRef
+### 事件源：CFRunLoopSourceRef
 
 事件源，有两种事件类型source0和source1
 
@@ -77,11 +80,11 @@ source0的事件是APP内部事件，触摸、摇晃等
 
 source1是系统内核的产生的事件
 
-#### 定时器: CFRunLoopTimeRef 
+### 定时器: CFRunLoopTimeRef 
 
 基于时间的触发器。(基本就是NSTimer)，当它加入到RunLoop时，RunLoop会注册对应的时间点，当时间点到时，RunLoop会被唤醒来执行那个回调
 
-#### mode：CFRunLoopModeRef
+### mode：CFRunLoopModeRef
 
 模式，系统默认定义了多种运行模式。RunLoop运行时都会有选择一个模式运行。
 
@@ -127,7 +130,7 @@ source1是系统内核的产生的事件
 
 所以，上面的示例中。将最后一行代码改为`[[NSRunLoop currentRunLoop] addTimer:timer forMode:kCFRunLoopCommonModes]`就可以在滑动与静止时都进行输出了
 
-### RunLoop和线程之间的关系
+## RunLoop和线程之间的关系
 
 线程和RunLoop是一一对应的，对应关系保存在一个全局的Dictionary中。
 
@@ -137,13 +140,15 @@ source1是系统内核的产生的事件
 
 主线程的RunLoop是在启动的时候系统创建的。
 
-### 苹果基于RunLoop实现的功能
+### 什么场景下需要开启子线程的Runloop
 
-### RunLoop的使用场景
+## 苹果基于RunLoop实现的功能
+
+## RunLoop的使用场景
 
 ***
 
-### 参考资料
+## 参考资料
 
 * https://blog.ibireme.com/2015/05/18/runloop/
 
