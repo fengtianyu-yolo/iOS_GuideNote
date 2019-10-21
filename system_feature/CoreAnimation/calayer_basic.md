@@ -35,6 +35,22 @@ UIView的作用是创建并且管理这个CALayer对象
 
 * 3D变化
 
+3. **使用CALayer还是UIView**
+
+一般情况下会使用`UIView`,原因如下
+
+1. 在iOS平台下轻量级的UIView并没有显著的影响性能
+
+2. 使用UIView可以使用所有CALayer的属性的同时，还可以使用UIView的高级API、如事件处理、自动布局等
+
+**当满足这些条件时可以考虑使用CALayer**
+
+1. 开发可以同时在iOS和MacOS运行的应用时
+
+2. 做一些对性能要求特别高的工作，比如一些UIView一些可忽略不计的操作都会引起比较大的差异时
+
+3. 使用多种CALayer的子类，并且不想创建UIView将他们全部包装起来的时候
+
 ## 了解CALayer的寄宿图
 
 `CALayer`有一个属性叫`contents`
