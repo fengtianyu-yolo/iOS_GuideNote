@@ -161,7 +161,7 @@
 
 ***
 
-## 四、 iOS中的一些系统机制、系统模块
+## 四、 深入了解iOS系统
 
 ### 核心动画相关内容
 
@@ -412,6 +412,8 @@
 * [`Capabilities` 选项卡中一部分开关不显示](/my_note/project_config_issue.md)
 
 * [使用instrument调试app的时候不显示具体方法的问题](/my_note/project_config_issue.md)
+
+* [XCode运行时报错 The run destination is not valid for running ...](/my_note/project_config_issue.md)
 
 ### 工程或模块设计时需要考虑的问题
 
