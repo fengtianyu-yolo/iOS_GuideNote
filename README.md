@@ -401,11 +401,13 @@
 
 ## 常见的非代码的问题
 
-#### CocoaPods的使用
+#### CocoaPods使用遇到的问题
 
 * [Pod库lint时报错不支持i386架构的解决方案](/my_note/pods/resolve_pod_i386_issue.md)
 
-* [私有库中使用到的.a，未引用到库中的问题](/my_note/pods/)
+* [私有库中使用到的.a，未引用到库中的问题](/my_note/pods/pod_reference_library.md)
+
+* [pod reop update 慢的解决方案](/my_note/pods/resolve_repoupdate.md)
 
 #### 工程配置问题
 
