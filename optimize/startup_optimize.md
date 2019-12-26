@@ -60,11 +60,12 @@ Main阶段的耗时，可以通过记录时间戳，进行比较
 
 `App Launch` -> `Static Runtime Initialzer`
 
+### Main阶段的优化
+
 ## 验证优化效果
 
 ## 相关工具的使用
 
-## 验证是否有效
 
 ## Link
 
