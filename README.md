@@ -327,6 +327,8 @@
 
     * 优化接口
 
+* [包大小优化实践](/optimize/AppThinning.md)
+
 * [ipa包大小优化点记录](/optimize/ipa包大小优化点记录.md)
 
 * [组件化过程中私有Pod库优化过程记录](/optimize/pod_optimize.md)
