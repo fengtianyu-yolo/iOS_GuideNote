@@ -1,6 +1,6 @@
 # 包大小优化
 
-![App包优化](https://github.com/cocacola-ty/Images/blob/master/ipasizeoptimization.png?raw=true)
+![包大小优化内容](https://upload-images.jianshu.io/upload_images/1284329-6390499ea74e3fad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## iOS中几种包的说明
 
@@ -38,7 +38,7 @@
 
 ### 图片资源处理
 
-#### 1. 如何查找未使用的图片资源
+#### 如何查找未使用的图片资源
 
 > 工具：LSUnusedResources
 
@@ -54,15 +54,21 @@
 
 	3. 需要特殊注意带有规则的图片名 ， 如@`"img_%d"` 这种的
 
-#### 2. 如何查找并删除重复的图片
+***
+
+#### 如何查找并删除重复的图片
 
 > 工具：fdupes
 
 比较图片的MD5，如果MD5是相同的则是相同图片。
 
-#### 3. 删相似的图片
+***
+
+#### 如何查找相似的图片并删除
 
 做图片的相似度比较，图片相似度高的，可以选择删除
+
+***
 
 ### 如何查找没有使用的类文件
 
@@ -82,11 +88,13 @@
 
 ##### 方式三：AppCode的Inspect Code 功能
 
+***
+
 ### 如何查找代码中没有使用的方法
 
-## 图片格式角度
+***
 
-## 针对特定文件去优化
+### 针对特定文件去优化
 
 通过LinkMap统计占用空间较大的文件，去单独优化处理
 
