@@ -34,11 +34,10 @@
 
 	也就是说这个安装大小其实是.ipa进行解压之后的.app的大小。不过这个.app已经进行过加密处理了，所以会变大一些
 
-## 优化内容的详细实践
+## 各个优化内容的详细实践过程
 
-### 图片资源处理
 
-#### 如何查找未使用的图片资源
+### 如何查找未使用的图片资源
 
 > 工具：LSUnusedResources
 
@@ -56,7 +55,7 @@
 
 ***
 
-#### 如何查找并删除重复的图片
+### 如何查找并删除重复的图片
 
 > 工具：fdupes
 
@@ -64,7 +63,7 @@
 
 ***
 
-#### 如何查找相似的图片并删除
+### 如何查找相似的图片并删除
 
 做图片的相似度比较，图片相似度高的，可以选择删除
 
@@ -91,6 +90,35 @@
 ***
 
 ### 如何查找代码中没有使用的方法
+
+***
+
+### 本地图片尝试使用webp格式的实践过程
+
+1. 验证webp格式的图片体积比png格式的图片体积能缩小多少
+
+2. 验证webp格式的图片在AppThinning的时候是否会有效
+
+	不会
+
+3. 验证webp格式的图片在打包的时候是否会走Xcode的压缩
+
+	不会
+
+#### 工具准备
+
+谷歌提供了png转webp的工具 
+
+	* https://developers.google.com/speed/webp/docs/precompiled  
+	* https://developers.google.com/speed/webp/docs/using
+
+安装：用homebrew安装 `brew install webp`
+
+基本用法：
+
+* png 转 webp ：`cwebp -q 90 image.png -o image.webp` 
+
+* webp装png :`dwebp image.webp -o image.png`
 
 ***
 
