@@ -1,6 +1,6 @@
 # 包大小优化
 
-![包大小优化内容](https://upload-images.jianshu.io/upload_images/1284329-6390499ea74e3fad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![包大小优化内容](https://upload-images.jianshu.io/upload_images/1284329-f95c084091a74705.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## iOS中几种包的说明
 
@@ -36,7 +36,7 @@
 
 ## 各个优化内容的详细实践过程
 
-### 如何查找未使用的图片资源
+### 如何查找未使用的图片资源 
 
 > 工具：LSUnusedResources
 
@@ -92,7 +92,7 @@
 
 ***
 
-### 本地图片尝试使用webp格式的实践过程
+### 本地图片尝试使用webp格式的实践过程  ☹️
 
 1. 验证webp格式的图片体积比png格式的图片体积能缩小多少
 
@@ -126,7 +126,6 @@
 ### 针对特定文件去优化
 
 通过LinkMap统计占用空间较大的文件，去单独优化处理
-
 
 ## 参考链接
 
