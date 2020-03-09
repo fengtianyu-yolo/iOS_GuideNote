@@ -233,6 +233,8 @@
 
 * [iOS事件响应链和事件传递机制](/system_feature/iOS的事件传递链和响应链.md)
 
+* [iOS事件响应链和手势识别时机](/system_feature/response_chain.md)
+
 * [load方法和initalize方法](/system_feature/load方法和initalize方法.md)
 
 * 如何去设计一个通知中心 / 通知中心的实现
