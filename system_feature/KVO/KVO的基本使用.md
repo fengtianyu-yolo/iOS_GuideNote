@@ -101,4 +101,4 @@ KVO可以监听单个属性的变化，也可以监听集合对象的变化。
 @end
 ```
 
-通过`mutableArrayValueForKey`方法取得的数组对象去添加或移除元素时才会触发KVO机制。
+**通过`mutableArrayValueForKey`方法取得的数组对象去添加或移除元素时才会触发KVO机制。**

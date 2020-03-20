@@ -12,7 +12,29 @@
 
 ### 怎么实现的
 
+![notification_struct.png](https://upload-images.jianshu.io/upload_images/1284329-9346b428092929a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+通知中心存储的结构基本如上图所示
+
+每当注册一个通知的时候 
+
+以通知名为key，存储到一个Table中。
+
+value也是一个Table，里面的这个table的key是通知的object参数，value存储的是通知的SEL、observer等
+
+#### 查找过程
+
+当发出一个通知时，通知中心首先根据通知名在外层的table中去查找
+
+当找到之后，根据这个通知的object参数，去内部的table中继续查找。
+
+当object参数为nil的时候，系统会提供一个key。所有object为nil的观察者都放在这个key对应的value中
+
+**由于一个通知可以有很多个观察者，内部table的value其实是一个链表**
+
+当通过object去内部table查找到对应链表之后，依次调用链表中的observer的SEL。
+
+完成通知过程
 
 ### 通知的常见问题
 
