@@ -183,7 +183,7 @@
 
 * 各种动画效果的实现
 
-### KVO观察者机制(/system_feature/KVO/KVO.md)
+### [KVO观察者机制](/system_feature/KVO/KVO.md)
 
 * [KVO的实现原理](/system_feature/KVO/KVO的实现原理.md)
 
