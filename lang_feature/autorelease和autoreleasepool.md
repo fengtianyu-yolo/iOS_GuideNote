@@ -62,9 +62,18 @@ viewDidAppear - (null)
 
 `reference` 弱引用 `str`,不会对`str`的引用计数产生影响，用来查看`str`是否已经释放。
 
-`[NSString stringWithFormat:@"a string object"]` 创建一个`autorelease`字符串对象，此时该对象的引用计数是1 
+`[NSString stringWithFormat:@"a string object"]`的代码实现中简化后应该是这样的 
 
-通过`str`引用该字符串对象，引用计数变为2 
+```
++ (NSString *)stringWithFormat:(NSString *)str {
+    id __autoreleasing str = @"";
+    return str;
+}
+```
+
+它创建了一个autorelease的str对象，因为没有添加`@autoreleasepool{}`,所以这个autorelease对象添加到默认的释放池中，此时str对象的引用计数应该是1。
+
+该方法返回的对象被`str`引用，引用计数变为2
 
 `viewDidLoad`方法执行完毕，`str`指针释放，字符串对象的引用计数变为1
 
@@ -141,7 +150,7 @@ __weak id reference = nil;
 }
 ```
 
-#### 输出结果
+##### 输出结果
 
 ```
 viewDidLoad - a string object
@@ -149,7 +158,7 @@ viewWillAppear - (null)
 viewDidAppear - (null)
 ```
 
-#### 代码分析
+##### 代码分析
 
 相比第二种情况，将`str`变量放到了`@autoreleasepool{}`的外边，所以在`@autoreleasepool{}`之后字符串对象虽然release了一次，但是`str`还在引用该对象。所以在`viewDidLoad`中并没有释放。
 
@@ -180,7 +189,6 @@ for (int i = 0; i < 1000; i++) {
 通常非`alloc`、`new`、`copy`、`mutableCopy`出来的对象都是autorelease的，比如`[UIImage imageNamed:]`、`[NSString stringWithFormat]`、`[NSMutableArray array]`等。
 
 当不确定时可以通过case one 来检测是否该对象在作用域结束之后了立即释放来确定。
-
 
 ### 参考链接
 
