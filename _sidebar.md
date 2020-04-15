@@ -1,7 +1,7 @@
 
 - 基础知识
     
-    - [Objective-C](/Base/ObjcLang/README)
+    - [Objective-C](/Base/ObjcLang/index.html)
 
     - [UIKit & Foundation](/Base/UIKit/README)
 
@@ -9,7 +9,7 @@
 
     - Block
 
-    - iOS核心机制
+    - [iOS核心机制](/Base/CoreSys/README)
 
 - 开发提升
 

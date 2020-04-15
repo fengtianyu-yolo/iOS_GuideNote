@@ -28,7 +28,7 @@ value也是一个Table，里面的这个table的key是通知的object参数，va
 
 当找到之后，根据这个通知的object参数，去内部的table中继续查找。
 
-当object参数为nil的时候，系统会提供一个key。所有object为nil的观察者都放在这个key对应的value中
+当注册通知时的object参数为nil的时候，系统会提供一个key。所有object为nil的观察者都放在这个key对应的value中
 
 **由于一个通知可以有很多个观察者，内部table的value其实是一个链表**
 
@@ -36,7 +36,7 @@ value也是一个Table，里面的这个table的key是通知的object参数，va
 
 完成通知过程
 
-### 通知的常见问题
+### 常见问题
 
 1. 通知中心是**同步**发送通知的。
 
@@ -45,6 +45,7 @@ value也是一个Table，里面的这个table的key是通知的object参数，va
 2. object参数的作用
 
 	`[[NSNotificationCenter defaultCenter] postNotificationName:@"n1" object:@2];`
+
 	`[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(action) name:@"n1" object:nil];`
 
 	**注册通知的时候一般情况会传nil，则表示只监听通知名为指定name的，无论是哪个对象发出的。也就是监听所有名字为n1的通知，不关心发送通知的时候的object参数是什么**
@@ -75,11 +76,13 @@ value也是一个Table，里面的这个table的key是通知的object参数，va
 
 	通知的响应方法会多次执行
 
-### 不足
+### 默认通知中心的不足
 
-如果想要进行异步的发送通知、在特定的时机发送通知，只使用通知中心就无法满足。
+如果想要进行**异步的发送通知**、**在特定的时机发送通知**，只使用通知中心就无法满足。
 
 对于有更复杂条件的情况，就可以使用**通知队列**来完成
+
+***
 
 ## 通知队列
 
