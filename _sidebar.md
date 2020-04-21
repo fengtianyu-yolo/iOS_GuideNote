@@ -1,7 +1,7 @@
 
 - 应用开发基础
     
-    - [Objective-C](/Base/ObjcLang/index.html)
+    - [Objective-C](/Base/ObjcLang/)
 
     - [UIKit & Foundation](/Base/UIKit/README)
 
@@ -26,5 +26,15 @@
     - [Shell]()
 
 - 性能优化
+    
+    - [启动速度](/performance/startup)
+
+    - [Crash](performance/crash)
+
+    - [包大小](/performance/ipasize)
+
+    - [内存](/performance/memory)
+
+    - [卡顿](/performance/block)
 
 - 计算机基础知识
