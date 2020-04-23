@@ -55,3 +55,9 @@ vc.view.backgroundColor = [UIColor redColor];
 
 	出现这种情况是因为在进行赋值操作前，有通过`.view`获取视图的操作，所以先去加载了视图，然后执行的赋值。
 
+- `init`和`dealloc`中是否可以使用setter
+
+	推荐通过实例变量来进行赋值，使用setter赋值当存在继承关系时可能会导致意外的错误。
+
+	[具体分析见这里](/Base/UIKit/UIViewController/q1.md)
+
