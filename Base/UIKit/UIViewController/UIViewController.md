@@ -57,7 +57,9 @@ vc.view.backgroundColor = [UIColor redColor];
 
 - `init`和`dealloc`中是否可以使用setter
 
-	推荐通过实例变量来进行赋值，使用setter赋值当存在继承关系时可能会导致意外的错误。
-
+	不要使用setter。使用setter赋值当存在继承关系时可能会导致意外的错误。
+	
+	推荐通过实例变量来进行赋值，
+	
 	[具体分析见这里](/Base/UIKit/UIViewController/q1.md)
 
