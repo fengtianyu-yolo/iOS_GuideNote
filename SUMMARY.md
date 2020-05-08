@@ -5,14 +5,14 @@
 * [Objective-C语言]()
 
 * [UIKit & Foundation]()
-	* [UIButton]()
+	* [UIViewController](/Base/UIKit/UIViewController/UIViewController.md)
 	* [UITableView]()
 
 * [多线程]()
 
 ## 开发能力提升
 
-* [代码规范]()
+* [代码规范](/Senior/coderule.md)
 
 * [技巧总结]()
 
